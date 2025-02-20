@@ -5,8 +5,14 @@
 
 using namespace std;
 bool b1(string a){
+    for(int i=0;i<a.size() ;i++){
+      if(a[i]<0 || a[i]>255  ){
+        cout<<"not character"<<endl;
+      }
+    }
     for(int i=0;i<a.size()/2 ;i++){
-      if(a[i]!=a[a.size()-1-i]){
+      
+      if(a[i]!=a[a.size()-1-i] ){
           return false;
       }
        
@@ -18,7 +24,8 @@ bool b1(string a){
 int main()
 
 {   
-    bool kq= b1("MADAM" );
-   cout<kq;
+    bool kq= b1("zAcAM##" );
+    
+    cout<<kq;
     return 0;
 }
